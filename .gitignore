@@ -1,0 +1,10 @@
+**/sdkconfig*
+
+**/managed_components/
+
+**/dependencies.lock
+
+**/build/
+**/cmake-build-debug/
+
+.idea/
