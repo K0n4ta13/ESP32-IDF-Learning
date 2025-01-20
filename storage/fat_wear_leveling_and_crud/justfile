@@ -1,0 +1,34 @@
+alias r := run
+alias c := conf
+alias t := target
+alias e := env
+
+default: run
+
+# Flash the project.
+flash:
+  idf.py flash
+
+# Display serial output.
+monitor:
+  idf.py monitor
+
+# Flash the project and display serial output.
+run:
+  idf.py flash monitor
+
+# Run "menuconfig" project configuration tool.
+conf:
+  idf.py menuconfig
+
+# Set the chip target to build.
+target TARGET:
+  idf.py set-target esp32-{{TARGET}}
+
+# Delete the entire build directory contents.
+clean:
+  idf.py fullclean
+
+# Load the environment.
+env:
+  . ~/esp-idf/export.sh
